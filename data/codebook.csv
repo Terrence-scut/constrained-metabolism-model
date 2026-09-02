@@ -1,0 +1,49 @@
+domain,canonical_code,descriptive_name,definition,unit,paper_reference,notes
+node_type,NDPRJ,construction_project,"Construction project receiving concrete, concrete blocks, and selected recyclates.",,Supplementary Methods 5,Terminal demand node.
+node_type,NDCBP,concrete_batching_plant,Concrete batching plant.,,Supplementary Methods 5,Manufactures concrete supplied to construction projects.
+node_type,NDBMP,block_manufacturing_plant,Concrete-block manufacturing plant.,,Supplementary Methods 5,Manufactures concrete blocks supplied to construction projects.
+node_type,NDCEM,cement_plant,Cement supply plant.,,Supplementary Methods 5,Virgin-material supplier.
+node_type,NDSND,marine_sand_desalination_plant,Marine-sand desalination plant.,,Supplementary Methods 5,Virgin-material supplier.
+node_type,NDQRY,quarry,Natural-coarse-aggregate quarry.,,Supplementary Methods 5,Virgin-material supplier.
+node_type,NDWRP,waste_recycling_plant,Waste recycling plant converting WC and WB into recyclates.,,Supplementary Methods 5,Recycling-scheme throughput is indexed by this node type.
+node_type,NDGRD,demolition_waste_grid_cell,Spatial grid cell providing model-ready annual WC and WB inputs.,,Supplementary Methods 5,Each WC or WB input file contains one row per grid cell.
+node_type,NDCWP,plant_receiving_wharf,Cargo wharf serving concrete batching and block manufacturing plants.,,Supplementary Methods 5,Downstream wharf on waterborne routes.
+node_type,NDCWV,virgin_supplier_dispatch_wharf,Cargo wharf serving virgin-material suppliers.,,Supplementary Methods 5,Upstream wharf on waterborne routes.
+material,CEM,cement,Cement used in concrete and block production.,t,Supplementary Methods 5,Canonical paper material code.
+material,NS,natural_sand,Natural sand used as fine aggregate.,t,Supplementary Methods 5,Canonical paper material code.
+material,NCA,natural_coarse_aggregates,Natural coarse aggregates supplied by quarries.,t,Supplementary Methods 5,Canonical paper material code.
+material,WAT,water,Water added locally at concrete batching and block manufacturing plants.,t,Supplementary Methods 5,No independent upstream supply arc; retained in mix constraints and terminal flows.
+material,WC,waste_concrete,Waste concrete entering the recycling network.,t,Supplementary Methods 5,Model-ready grid-cell annual input is stored in the WC files.
+material,WB,waste_brick,Waste brick entering the recycling network.,t,Supplementary Methods 5,Model-ready grid-cell annual input is stored in the WB files.
+material,RCS,recycled_concrete_segments,Recycled concrete segments delivered directly to construction projects.,t,Supplementary Methods 5,Recyclate from a concrete recycling scheme.
+material,RCL,recycled_concrete_lumps,Recycled concrete lumps delivered directly to construction projects.,t,Supplementary Methods 5,Recyclate from a concrete recycling scheme.
+material,RCC,recycled_concrete_coarse_aggregates,Coarse aggregates recovered from waste concrete.,t,Supplementary Methods 5,Recyclate used in concrete production.
+material,RCF,recycled_concrete_fine_aggregates,Fine aggregates recovered from waste concrete.,t,Supplementary Methods 5,Recyclate used in block production.
+material,RBC,recycled_brick_coarse_aggregates,Coarse aggregates recovered from waste brick.,t,Supplementary Methods 5,Recyclate used in block production.
+material,RBF,recycled_brick_fine_aggregates,Fine aggregates recovered from waste brick.,t,Supplementary Methods 5,Recyclate used in block production.
+material,RBP,recycled_brick_powder,Powder recovered from waste brick.,t,Supplementary Methods 5,Recyclate used in block production.
+parameter,concrete_demand,annual_concrete_demand,Annual mass demand for concrete products at a construction project.,t yr^-1,Supplementary Methods 5,Implemented as terminal constituent and direct-recyclate mass flows.
+parameter,block_demand,annual_block_demand,Annual mass demand for concrete-block products at a construction project.,t yr^-1,Supplementary Methods 5,Implemented as terminal constituent mass flows.
+parameter,batching_plant_capacity,annual_batching_plant_capacity,Annual production-capacity limit of a concrete batching plant.,t yr^-1,Supplementary Methods 5,Stored in the static node-parameter table.
+parameter,block_plant_capacity,annual_block_plant_capacity,Annual production-capacity limit of a block manufacturing plant.,t yr^-1,Supplementary Methods 5,Stored in the static node-parameter table.
+parameter,cement_supply_capacity,annual_cement_supply_capacity,Annual cement supply-capacity limit.,t yr^-1,Supplementary Methods 5,Stored in the static node-parameter table.
+parameter,marine_sand_supply_capacity,annual_marine_sand_supply_capacity,Annual marine-sand supply-capacity limit.,t yr^-1,Supplementary Methods 5,Stored in the static node-parameter table.
+parameter,natural_coarse_aggregate_supply_capacity,annual_natural_coarse_aggregate_supply_capacity,Annual natural-coarse-aggregate supply-capacity limit.,t yr^-1,Supplementary Methods 5,Stored in the static node-parameter table.
+parameter,recycling_plant_capacity,annual_recycling_plant_capacity,Annual upper bound on total outgoing recyclate mass from a waste recycling plant.,t yr^-1,Supplementary Methods 5,Equivalence to feedstock-processing capacity relies on scheme yields summing to one and no modeled mass loss.
+parameter,waste_concrete_network_input_t_per_year,annual_waste_concrete_network_input,Model-ready annual WC quantity entering the network from one grid cell.,t yr^-1,Supplementary Methods 5,"Reflects lifespan scenario, selected Monte Carlo realization, and applicable city-specific policy targets."
+parameter,waste_brick_network_input_t_per_year,annual_waste_brick_network_input,Model-ready annual WB quantity entering the network from one grid cell.,t yr^-1,Supplementary Methods 5,"Reflects lifespan scenario, selected Monte Carlo realization, and applicable city-specific policy targets; includes an absorption adjustment where applicable, with the rate recorded in the manifest and filename."
+recycling_scheme,CRS-S,segment_dominant_concrete_recycling_scheme,"WC recycling scheme yielding 0.50 t RCS, 0.31 t RCL, 0.13 t RCC, and 0.06 t RCF per t of scheme throughput.",,Supplementary Methods 5,"Feedstock: WC; listed product yields sum to 1.00 t per t of throughput; scheme throughput is measured in t yr^-1."
+recycling_scheme,CRS-L,lump_dominant_concrete_recycling_scheme,"WC recycling scheme yielding 0.62 t RCL, 0.25 t RCC, and 0.13 t RCF per t of scheme throughput.",,Supplementary Methods 5,"Feedstock: WC; listed product yields sum to 1.00 t per t of throughput; scheme throughput is measured in t yr^-1."
+recycling_scheme,CRS-C,coarse_aggregate_dominant_concrete_recycling_scheme,"WC recycling scheme yielding 0.70 t RCC and 0.30 t RCF per t of scheme throughput.",,Supplementary Methods 5,"Feedstock: WC; listed product yields sum to 1.00 t per t of throughput; scheme throughput is measured in t yr^-1."
+recycling_scheme,BRS-C,coarse_aggregate_dominant_brick_recycling_scheme,"WB recycling scheme yielding 0.70 t RBC and 0.30 t RBF per t of scheme throughput.",,Supplementary Methods 5,"Feedstock: WB; listed product yields sum to 1.00 t per t of throughput; scheme throughput is measured in t yr^-1."
+recycling_scheme,BRS-F,fine_aggregate_dedicated_brick_recycling_scheme,WB recycling scheme yielding 1.00 t RBF per t of scheme throughput.,,Supplementary Methods 5,"Feedstock: WB; single-product yield is 1.00 t per t of throughput; scheme throughput is measured in t yr^-1."
+recycling_scheme,BRS-P,powder_dedicated_brick_recycling_scheme,WB recycling scheme yielding 1.00 t RBP per t of scheme throughput.,,Supplementary Methods 5,"Feedstock: WB; single-product yield is 1.00 t per t of throughput; scheme throughput is measured in t yr^-1."
+constraint_group,C1,project_demand_and_direct_recyclate_limits,Project demand satisfaction and direct-recyclate replacement limits.,,Supplementary Methods 5,Stable notebook constraint-group identifier.
+constraint_group,C2,batching_plant_capacity,Concrete batching plant capacity limits.,,Supplementary Methods 5,Stable notebook constraint-group identifier.
+constraint_group,C3,concrete_mix_and_recyclate_replacement,Concrete mix-proportion constraints and the coarse-recyclate replacement limit.,,Supplementary Methods 5,Stable notebook constraint-group identifier.
+constraint_group,C4,block_plant_capacity,Block manufacturing plant capacity limits.,,Supplementary Methods 5,Stable notebook constraint-group identifier.
+constraint_group,C5,block_mix_and_recyclate_replacement,Block mix-proportion constraints and recyclate replacement limits.,,Supplementary Methods 5,Stable notebook constraint-group identifier.
+constraint_group,C6,recycling_scheme_conversion_and_capacity,"Recycling-scheme feedstock balance, fixed-yield conversion, and recycling-plant capacity constraints.",,Supplementary Methods 5,Stable notebook constraint-group identifier.
+constraint_group,C7,waste_feedstock_input,Grid-cell WC and WB inputs entering the modeled network.,,Supplementary Methods 5,Inputs already reflect the scenario dimensions and applicable city-specific policy targets.
+constraint_group,C8,virgin_material_supply_capacity,Virgin-material supply-capacity limits.,,Supplementary Methods 5,Stable notebook constraint-group identifier.
+constraint_group,C9,intermediate_node_flow_conservation,Material-flow conservation at wharves and manufacturing plants.,,Supplementary Methods 5,WAT is excluded only from the manufacturing-node inflow-outflow balance.

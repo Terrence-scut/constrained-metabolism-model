@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite both the software and the associated article listed under preferred-citation."
+type: software
+title: "Constrained Metabolism Model"
+version: "1.0.0"
+repository-code: "https://github.com/Terrence-scut/constrained-metabolism-model"
+
+authors:
+  - given-names: "Tao"
+    family-names: "Zhang"
+
+contact:
+  - given-names: "Bo"
+    family-names: "Wu"
+    email: "bowu@scut.edu.cn"
+
+preferred-citation:
+  type: article
+  title: "Unlocking Resource and Carbon Benefits in Urban Mining"
+  authors:
+    - given-names: "Tao"
+      family-names: "Zhang"
+    - given-names: "Nan"
+      family-names: "Hu"
+    - given-names: "Xinyu"
+      family-names: "Zhao"
+    - given-names: "Yuanguang"
+      family-names: "Zhong"
+    - given-names: "Sizhe"
+      family-names: "Ruan"
+    - given-names: "Bo"
+      family-names: "Wu"

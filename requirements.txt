@@ -1,0 +1,7 @@
+# Direct notebook dependencies and tested versions.
+gurobipy==12.0.2
+numpy==1.23.5
+pandas==1.5.3
+scipy==1.10.0
+jupyterlab==3.5.3
+ipykernel==6.19.2

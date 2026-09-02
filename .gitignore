@@ -1,0 +1,28 @@
+# Python environments and caches
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Generated model outputs and solver artifacts
+results/
+*.ilp
+*.lp
+*.mps
+*.mst
+*.sol
+*.log
+
+# Local configuration and credentials
+.env
+*.lic
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

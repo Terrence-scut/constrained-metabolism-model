@@ -1,0 +1,2 @@
+# Prevent line-ending normalization in manifest-tracked CSV files.
+*.csv -text
