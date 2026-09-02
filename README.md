@@ -1,6 +1,6 @@
 # Constrained Metabolism Model
 
-This repository contains the Python notebook and model-ready inputs for the constrained metabolism model described in Supplementary Methods 5. The repository covers the regional material-flow model and its scenario inputs. It does not include the upstream building-stock projection, Monte Carlo generation, or life-cycle inventory preprocessing workflows.
+This repository contains the Python notebook and model-ready inputs for the constrained metabolism model described in Supplementary Methods 5. It covers the regional material-flow model and its scenario inputs.
 
 ## Repository contents
 
